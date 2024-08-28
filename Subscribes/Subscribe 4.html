@@ -8,10 +8,16 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        /* General Body Styles */
         body {
             background: #000000;
             background: -webkit-linear-gradient(to right, #434343, #000000);
             background: linear-gradient(to right, #434343, #000000);
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            overflow: hidden;
         }
 
         .navbar {
@@ -196,7 +202,7 @@
     </style>
 </head>
 
-<body>
+<body oncontextmenu="return false;">
     <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="../starting/starting.html">
             <img src="../starting/aa.png" alt="Logo">
@@ -287,6 +293,9 @@
             function showVideo() {
                 $('#videoModal').modal('show');
             }
+
+            // Preventing right-click and text selection
+            document.addEventListener('contextmenu', event => event.preventDefault());
         </script>
 </body>
 
