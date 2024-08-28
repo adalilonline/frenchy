@@ -8,16 +8,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* General Body Styles */
         body {
             background: #000000;
             background: -webkit-linear-gradient(to right, #434343, #000000);
             background: linear-gradient(to right, #434343, #000000);
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            overflow: hidden;
         }
 
         .navbar {
@@ -199,16 +193,31 @@
                 text-align: center;
             }
         }
+
+        /* Screen Protection Effect */
+        .screen-protection {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+            display: none;
+            z-index: 9999;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+            padding-top: 20%;
+        }
     </style>
 </head>
 
-<body oncontextmenu="return false;">
+<body>
     <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="../starting/starting.html">
             <img src="../starting/aa.png" alt="Logo">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -244,8 +253,7 @@
                 1- قم بالدفع عن طريق فوادفون كاش على الرقم الاتي ( رقم التحويل : 01062039393 )<br>
                 2- قم بارسال صورة التحويل على رقم الواتساب 01062039393<br>
                 3- ثم ارسل مع صورة التحويل بياناتك ( اسمك , العام الدراسي , المدرسة , رقم للتواصل معك )<br>
-                4- بعد ارسال هذه البيانات سنرسل لك اسم المستخدم وكلمة السر الخاصة بك لتتمكن من الدخول والاستفادة بالمنصة
-                الخاصة بنا
+                4- بعد ارسال هذه البيانات سنرسل لك اسم المستخدم وكلمة السر الخاصة بك لتتمكن من الدخول والاستفادة بالمنصة الخاصة بنا
             </p>
         </div>
 
@@ -272,8 +280,8 @@
                     <div class="modal-body">
                         <div class="video-container">
                             <!-- Google Drive Embed Link -->
-                            <iframe src="https://drive.google.com/file/d/1s6rlrcFVI5hwsK2XRT1dG_-9N1QQ_7Sp/preview"
-                                allow="fullscreen" allowfullscreen></iframe>
+                            <iframe src="https://drive.google.com/file/d/1s6hMY2yW5g3S3c8MPzU7M5mB7gKLGPsO/preview" allowfullscreen></iframe>
+                            <!-- Overlay to cover controls -->
                             <div class="video-overlay"></div>
                         </div>
                     </div>
@@ -282,21 +290,35 @@
         </div>
 
         <!-- WhatsApp Icon -->
-        <div class="whatsapp-icon" onclick="location.href='https://wa.me/201062039393';">
+        <div class="whatsapp-icon">
             <i class="fab fa-whatsapp"></i>
         </div>
 
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script>
-            function showVideo() {
-                $('#videoModal').modal('show');
-            }
+        <!-- Screen Protection Overlay -->
+        <div id="protectionOverlay" class="screen-protection">
+            الرجاء عدم تسجيل الشاشة. هذه المحتويات محمية.
+        </div>
+    </div>
 
-            // Preventing right-click and text selection
-            document.addEventListener('contextmenu', event => event.preventDefault());
-        </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function showVideo() {
+            $('#videoModal').modal('show');
+        }
+
+        // محاولة بسيطة لاكتشاف تسجيل الشاشة وعرض رسالة تحذير
+        document.addEventListener('visibilitychange', function () {
+            if (document.hidden) {
+                // إذا كانت الصفحة مخفية، عرض الحماية
+                document.getElementById('protectionOverlay').style.display = 'block';
+            } else {
+                // عند عودة المستخدم، إخفاء الحماية
+                document.getElementById('protectionOverlay').style.display = 'none';
+            }
+        });
+    </script>
 </body>
 
 </html>
