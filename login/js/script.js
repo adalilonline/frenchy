@@ -2003,7 +2003,7 @@ const users = [
     { username: 'user3001', password: '23104108' },
     { username: 'user3002', password: '24104097' },
     { username: 'user3003', password: '24104104' },
-    { username: 'user3004', password: 'pass3004' },
+    { username: 'user3004', password: '23104301' },
     { username: 'user3005', password: 'pass3005' },
     { username: 'user3006', password: 'pass3006' },
     { username: 'user3007', password: 'pass3007' },
