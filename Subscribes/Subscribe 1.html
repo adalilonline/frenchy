@@ -107,46 +107,46 @@
                     onclick="window.location.href='https://drive.google.com/file/d/1cOKlaJH8i0EtW1M0hW5RkUzd9eI7bBS3/view?usp=sharing';">
             </div>
 
-            <!-- YouTube Video Image Boxes -->
+            <!-- Video Image Boxes with Google Drive Links -->
             <div class="image-box">
                 <img src="../images/video1.jpg" alt="Video Image 1"
-                    onclick="showVideo('https://www.youtube.com/embed/jnpglzxc1NY');">
+                    onclick="showVideo('1nXCGOTNyHPaV9S_ppnFCJjaYfMAHejEg');">
             </div>
             <div class="image-box">
                 <img src="../images/video2.jpg" alt="Video Image 2"
-                    onclick="showVideo('https://www.youtube.com/embed/PRTqdxswaq0');">
+                    onclick="showVideo('1DDkcywVNNkfzCPBpwFLSJjgqiJI2Sg0C');">
             </div>
             <div class="image-box">
                 <img src="../images/video3.jpg" alt="Video Image 3"
-                    onclick="showVideo('https://www.youtube.com/embed/PnkpUBQSYY8');">
+                    onclick="showVideo('1C0Z4RSxobg37j5yj-AbgdbfTB6MsIOGX');">
             </div>
             <div class="image-box">
                 <img src="../images/video4.jpg" alt="Video Image 4"
-                    onclick="showVideo('https://www.youtube.com/embed/1HpDN7V_040');">
+                    onclick="showVideo('1bIhjs4hUWywZYeleorpV3p2O1OFvKQiS');">
             </div>
             <div class="image-box">
                 <img src="../images/video5.jpg" alt="Video Image 5"
-                    onclick="showVideo('https://www.youtube.com/embed/_4r7rRZVWIo');">
+                    onclick="showVideo('143wNdvitsGdYMPMKxtjdsJWUhynywHHg');">
             </div>
             <div class="image-box">
                 <img src="../images/video6.jpg" alt="Video Image 6"
-                    onclick="showVideo('https://www.youtube.com/embed/40G8teaCdp0');">
+                    onclick="showVideo('1OQa3q7qZMJF5C_xfL9qp74K_kWIF8d7J');">
             </div>
             <div class="image-box">
                 <img src="../images/video7.jpg" alt="Video Image 7"
-                    onclick="showVideo('https://www.youtube.com/embed/EnXoKi67PKU');">
+                    onclick="showVideo('1FSjlapHB7T1hfBLu2fnRJiJwtykO9gUw');">
             </div>
             <div class="image-box">
                 <img src="../images/video8.jpg" alt="Video Image 8"
-                    onclick="showVideo('https://www.youtube.com/embed/zu8ia5ZZGGo');">
+                    onclick="showVideo('1D-lXgU1wrEJvcm2KyWe3v4f91GCIZb7C');">
             </div>
             <div class="image-box">
                 <img src="../images/video9.jpg" alt="Video Image 9"
-                    onclick="showVideo('https://www.youtube.com/embed/b0Rys7kcn9I');">
+                    onclick="showVideo('1XmSlfibX6jlqbEJwGI6hqqnGv_Yi6-BA');">
             </div>
             <div class="image-box">
                 <img src="../images/video10.jpg" alt="Video Image 10"
-                    onclick="showVideo('https://www.youtube.com/embed/');">
+                    onclick="showVideo('');">
             </div>
             <!-- Add more image boxes as needed -->
         </div>
@@ -175,7 +175,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-        function showVideo(videoSrc) {
+        function showVideo(videoId) {
+            var videoSrc = "https://drive.google.com/file/d/" + videoId + "/preview";
             document.getElementById('lessonVideo').src = videoSrc;
             $('#videoModal').modal('show');
         }
