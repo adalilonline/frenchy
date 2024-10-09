@@ -1021,7 +1021,7 @@ const users = [
     { username: 'user2019', password: '24104285' },
     { username: 'user2020', password: '24104197' },
     { username: 'user2021', password: '23104368' },
-    { username: 'user2022', password: 'pass2022' },
+    { username: 'user2022', password: '24104126' },
     { username: 'user2023', password: 'pass2023' },
     { username: 'user2024', password: 'pass2024' },
     { username: 'user2025', password: 'pass2025' },
