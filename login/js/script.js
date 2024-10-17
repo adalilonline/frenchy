@@ -1,5 +1,6 @@
 // Example user data: you would replace this with a real database or server call
 const users = [
+    { username: 'Dalil', password: 'Dalil0000!@#' }, // المستخدم الجديد    
     { username: 'user1001', password: 'pass1001' },
     { username: 'user1002', password: 'pass1002' },
     { username: 'user1003', password: 'pass1003' },
@@ -3012,16 +3013,23 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
     const user = users.find(user => user.username === username && user.password === password);
 
     if (user) {
-        const userNumber = parseInt(user.username.replace('user', '')); // Extract number from username
-        
-        if (userNumber >= 1001 && userNumber <= 2000) {
-            window.location.href = '../pages/grade1.html';
-        } else if (userNumber >= 2001 && userNumber <= 3000) {
-            window.location.href = '../pages/grade2.html';
-        } else if (userNumber >= 3001 && userNumber <= 4000) {
-            window.location.href = '../pages/grade3.html';
+        // تحقق خاص بالمستخدم Dalil للوصول إلى جميع الصفوف
+        if (username === 'Dalil') {
+            // توجيه المستخدم Dalil إلى صفحة يختار منها الصف
+            window.location.href = '../pages/select_grade.html'; // صفحة اختيار الصف
         } else {
-            alert('You are not authorized to access any pages.');
+            // استخراج الرقم من اسم المستخدم الآخر
+            const userNumber = parseInt(user.username.replace('user', ''));
+
+            if (userNumber >= 1001 && userNumber <= 2000) {
+                window.location.href = '../pages/grade1.html';
+            } else if (userNumber >= 2001 && userNumber <= 3000) {
+                window.location.href = '../pages/grade2.html';
+            } else if (userNumber >= 3001 && userNumber <= 4000) {
+                window.location.href = '../pages/grade3.html';
+            } else {
+                alert('You are not authorized to access any pages.');
+            }
         }
     } else {
         alert('Invalid username or password.');
