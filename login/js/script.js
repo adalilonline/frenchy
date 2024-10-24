@@ -2012,7 +2012,7 @@ const users = [
     { username: 'user3009', password: '24104250' },
     { username: 'user3010', password: '24104243' },
     { username: 'user3011', password: '24104253' },
-    { username: 'user3012', password: 'pass3012' },
+    { username: 'user3012', password: '23104022' },
     { username: 'user3013', password: 'pass3013' },
     { username: 'user3014', password: 'pass3014' },
     { username: 'user3015', password: 'pass3015' },
