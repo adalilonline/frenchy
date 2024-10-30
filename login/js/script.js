@@ -1,7 +1,7 @@
 // Example user data: you would replace this with a real database or server call
 const users = [
     { username: 'Dalil', password: 'Dalil0000!@#' }, // المستخدم الجديد    
-    { username: 'user1001', password: 'pass1001' },
+    { username: 'user1001', password: '24104312' },
     { username: 'user1002', password: 'pass1002' },
     { username: 'user1003', password: 'pass1003' },
     { username: 'user1004', password: 'pass1004' },
