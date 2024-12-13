@@ -4,7 +4,7 @@ const users = [
     { username: 'user1001', password: '24104312' },
     { username: 'user1002', password: '24104320' },
     { username: 'user1003', password: '24104329' },
-    { username: 'user1004', password: 'pass1004' },
+    { username: 'user1004', password: '24104345' },
     { username: 'user1005', password: 'pass1005' },
     { username: 'user1006', password: 'pass1006' },
     { username: 'user1007', password: 'pass1007' },
